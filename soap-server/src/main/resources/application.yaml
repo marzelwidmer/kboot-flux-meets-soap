@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: soap-server
+server:
+  port: 8888

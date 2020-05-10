@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb" version="2.1"
+        jaxb:extensionBindingPrefixes="xjc">
+    <jaxb:globalBindings typesafeEnumMaxMembers="1024">
+        <jaxb:serializable uid="1"/>
+        <xjc:simple/>
+        <xjc:javaType name="java.time.LocalDate" xmlType="xsd:date"
+                      adapter="ch.keepcalm.demo.ws.adapter.LocalDateAdapter"/>
+        <xjc:javaType name="java.time.LocalDateTime" xmlType="xsd:dateTime"
+                      adapter="ch.keepcalm.demo.ws.adapter.LocalDateTimeAdapter"/>
+    </jaxb:globalBindings>
+</jaxb:bindings>
+
+
