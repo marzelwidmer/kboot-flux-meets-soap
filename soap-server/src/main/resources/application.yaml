@@ -1,5 +1,24 @@
 spring:
   application:
     name: soap-server
+
 server:
   port: 8888
+
+logging:
+  pattern:
+    console: “%clr(%d{yyyy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-40.40logger{0}){magenta} - %clr(%m){green}%n”
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+  info:
+    git:
+      mode: full
