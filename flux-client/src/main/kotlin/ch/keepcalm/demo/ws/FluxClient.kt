@@ -19,7 +19,7 @@ fun main(args: Array<String>) {
 				bean {
 					router {
 						"api".nest {
-							GET("/block/{name}") {
+							GET("/lockdown/{name}") {
 								val countryService = ref<CountryService>()
 								ok().body(BodyInserters.fromValue(
 									countryService.getCountryByName(it.pathVariable("name")))

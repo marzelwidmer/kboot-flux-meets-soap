@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service
 
 @Service
 class CountryService (private val countryClient: CountryClient) {
+
     fun getCountryByName(name: String): GetCountryResponse {
        return countryClient.getCountry(name)
     }

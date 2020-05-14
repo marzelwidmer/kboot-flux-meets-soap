@@ -4,7 +4,8 @@
 
 ## API
 ```bash
-http :8080/api/Switzerland
+http :8080/api/lockdown/Switzerland
+http :8080/api/easing/Switzerland
 ```
 
 ## Blockhound

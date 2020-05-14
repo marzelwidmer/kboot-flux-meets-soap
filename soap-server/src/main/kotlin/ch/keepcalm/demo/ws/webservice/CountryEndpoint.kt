@@ -1,4 +1,4 @@
-package ch.keepcalm.demo.ws.webservice.producer
+package ch.keepcalm.demo.ws.webservice
 
 import ch.keepcalm.demo.ws.repository.CountryRepository
 import ch.keepcalm.demo.ws.wsdl.GetCountryRequest

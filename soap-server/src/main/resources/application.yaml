@@ -7,7 +7,7 @@ server:
 
 logging:
   pattern:
-    console: “%clr(%d{yyyy-MM-dd E HH:mm:ss.SSS}){blue} %clr(%-40.40logger{0}){magenta} - %clr(%m){green}%n”
+    console: "%cyan(%thread) %highlight(%-5level) %cyan(%logger{15}) - %msg %n"
 
 management:
   endpoints:

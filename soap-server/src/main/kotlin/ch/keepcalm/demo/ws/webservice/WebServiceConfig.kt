@@ -1,4 +1,4 @@
-package ch.keepcalm.demo.ws.webservice.producer
+package ch.keepcalm.demo.ws.webservice
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean
 import org.springframework.context.ApplicationContext
