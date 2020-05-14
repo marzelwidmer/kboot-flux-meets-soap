@@ -1,12 +1,21 @@
 # Flux Client
 [Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s)
 
+There are two `API` who call a blocking `SOAP` endpoint the one `lockdown` and `easing` who demostrate with the `Blockhound` 
+PlugIn the [Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s) show case how to manage `Blocking API`
+in a `Reactive World`.
 
-## API
+## API Lockdown Switzerland
 ```bash
 http :8080/api/lockdown/Switzerland
+```
+
+## API easing Switzerland
+```bash
 http :8080/api/easing/Switzerland
 ```
+
+
 
 ## Blockhound
 ### Dependency 
