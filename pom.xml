@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ch.keepcalm.demo</groupId>
-    <artifactId>kboot-flux-meets-ws</artifactId>
+    <artifactId>kboot-flux-meets-soap</artifactId>
     <description>Demo project Spring Boot</description>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
