@@ -1,14 +1,21 @@
-# Flux Client
-[Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s)
+# kboot-flux-meets-soap
+
+This will demonstrate how we can deal with a `Blocking API` in a `Reactive World`.
+
+This Sample provides a `soap-server` who demonstrate the blocking downstream `API`.
+The `flux-client` have two `REST API` who call the blocking `SOAP` endpoint the `lockdown` with no special implementation,
+where the [Blockhound](https://github.com/reactor/BlockHound) will throw an exception. 
+
+The `easing` `REST API` have implemented [Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s) show case how to manage `Blocking API`.
+
+With this approach to manage `Blocking API` in the same service in not in a separate service we have all the nice features like `retry` `filter` `map` and so on in our `Servive A` from the `Reactive Streams API`. 
+We also not have to manage no other service and have less network hops who are sometimes increase complexity and so on.
 
 
 ![FluxMeetsSoap.png](/img/FluxMeetsSoap.png)
 
 
-There are two `API` who call a blocking `SOAP` endpoint the one `lockdown` and `easing` who demonstrate with the `Blockhound` 
-PlugIn the [Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s) show case how to manage `Blocking API`
-in a `Reactive World`.
-
+# Flux Client
 ## API Lockdown Switzerland
 ```bash
 http :8080/api/lockdown/Switzerland
@@ -18,7 +25,6 @@ http :8080/api/lockdown/Switzerland
 ```bash
 http :8080/api/easing/Switzerland
 ```
-
 
 
 ## Blockhound
@@ -44,9 +50,18 @@ fun main(args: Array<String>) {
 
 
 # SOAP Server
+The Server have an implementation with a demonstration how we can write own `Kotlin DSL`.
 
-[Kotlin DSL in under an hour](https://www.youtube.com/watch?v=zYNbsVv9oN0)
-[Do Super Language with Kotlin](https://www.youtube.com/watch?v=hYXAFO3q3qU)
+## DSL
+```kotlin
+ country {
+    name = "Switzerland"
+    capital = "Bern"
+    population = 8_603_900
+    currency = "CHF"
+}
+```
+
 
 ## WSDL 
 `http://localhost:8888/ws/countries.wsdl`
@@ -81,3 +96,15 @@ printf '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelop
 </soapenv:Envelope>'| http  --follow --timeout 3600 POST http://localhost:8888/ws \
  Content-Type:'text/xml'
 ```
+
+
+ 
+> **_References:_**  
+>[Kotlin DSL in under an hour](https://www.youtube.com/watch?v=zYNbsVv9oN0)
+>[Do Super Language with Kotlin](https://www.youtube.com/watch?v=hYXAFO3q3qU)
+>[Blockhound](https://github.com/reactor/BlockHound
+>[Avoiding Reactor Meltdown](https://www.youtube.com/watch?v=xCu73WVg8Ps&t=7s)
+ 
+
+ 
+
