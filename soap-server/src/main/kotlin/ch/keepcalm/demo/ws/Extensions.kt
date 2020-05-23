@@ -21,7 +21,9 @@ data class Country(val name: String?, val capital: String?, val population: Int,
     }
 
     // Mapping
-    fun copy() = ch.keepcalm.demo.ws.domain.Country(name = name.toString(), capital = capital.toString(), population = population, currency = Currency.valueOf(currency.toString()).toString())
+    fun copyToDomainObject() = ch.keepcalm.demo.ws.domain.Country(
+        name = name.toString(), capital = capital.toString(), population = population, currency = Currency.valueOf(currency.toString()).toString()
+    )
 
     // Builder
     @CountryBuilder

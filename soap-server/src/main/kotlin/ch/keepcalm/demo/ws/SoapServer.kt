@@ -67,7 +67,7 @@ fun main(args: Array<String>) {
                             }
                             // Save it to the Database
                             .flatMap {
-                                countryRepository.save(it.copy()) // copy the values from the DSL class in the Database Layer Class
+                                countryRepository.save(it.copyToDomainObject()) // copy the values from the DSL class in the Database Layer Class
                             }
                             // Search all entries
                             .thenMany(countryRepository.findAll())
