@@ -2,3 +2,4 @@
 
 See more details here: https://blog.marcelwidmer.org/kboot-flux-meets-soap
 
+![FluxMeetsSoap](img/FluxMeetsSoap.png)
