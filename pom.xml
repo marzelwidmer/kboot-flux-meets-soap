@@ -10,5 +10,6 @@
     <modules>
         <module>flux-client</module>
         <module>soap-server</module>
+        <module>camel-client</module>
     </modules>
 </project>

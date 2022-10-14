@@ -8,14 +8,13 @@ import org.springframework.boot.runApplication
 import org.springframework.context.support.beans
 import org.springframework.web.reactive.function.BodyInserters
 import org.springframework.web.reactive.function.server.router
-import reactor.blockhound.BlockHound
 
 @SpringBootApplication
 class FluxClient
 
 fun main(args: Array<String>) {
 
-    BlockHound.install()
+//    BlockHound.install()
 
     runApplication<FluxClient>(*args) {
         addInitializers(
