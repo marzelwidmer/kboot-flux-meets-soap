@@ -136,7 +136,7 @@
                     <schemas>
                         <schema>
                             <fileset>
-                                <directory>${basedir}/src/main/wsdl
+                                <directory>${basedir}/src/main/resources/wsdl
                                 </directory>
                                 <includes>
                                     <include>**/countries.wsdl</include>
